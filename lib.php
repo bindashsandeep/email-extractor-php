@@ -1,4 +1,6 @@
 <?php
+require_once "disposable.php";
+
 function parseText($input) {
   $email = array();
   $invalid_email = array(); 
