@@ -1,7 +1,14 @@
 <?php
 require_once "lib.php";
-// use this code to extract email addresses from a text message 
-$input = ' place your text within the variable $input ';
+// paste your emails in folder import/import.txt 
+$file = fopen("import/import.txt", "r");
+
+while (!feof($file)) {
+$line_of_text = fgets($file);
+$input .= $line_of_text;
+}
+
+fclose($file);
 
 // export to csv file
 csv_to_export($input);
